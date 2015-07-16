@@ -1,0 +1,21 @@
+#albums_button {
+  display: block;
+  margin: 10px;
+}
+
+#album_links {
+  display: none;
+}
+
+#photos_div div {
+  width: 200px;
+}
+
+#photos_div div p {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#photos_div img {
+  width: 100%;
+}

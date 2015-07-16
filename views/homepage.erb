@@ -1,0 +1,12 @@
+<h1>Welcome!</h1>
+
+
+<a href="http://localhost:4567/view_all_photos">View All Photos</a>
+
+<button id="albums_button">View Photos By Album</button>
+
+<div id="album_links">
+  <% Album.all.each do |album| %>
+    <a href="http://localhost:4567/album/<%= album.id %>"><%= album.name %></a>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<div id="photos_div">
+  <div>
+    <% Photo.all.each do |photo| %>
+      <p><%= Photographer.where(id: photo.photographer_id).first.name %></p>
+      <img src=<%= photo.url %>></img>
+    <% end %>
+  </div>
+</div>
