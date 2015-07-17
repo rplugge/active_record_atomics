@@ -45,3 +45,11 @@ unless ActiveRecord::Base.connection.table_exists?(:albums_photos)
     t.integer :album_id
   end  
 end
+
+unless ActiveRecord::Base.connection.table_exists?(:users)
+  ActiveRecord::Base.connection.create_table :users do |t|
+    t.string :name
+    t.text :password
+    t.integer :photographer_id
+  end  
+end
