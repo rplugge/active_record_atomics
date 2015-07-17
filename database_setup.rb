@@ -1,4 +1,6 @@
-ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'community_app.db')
+configure :development do
+  ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'community_app.db')
+end
 
 ActiveRecord::Base.logger = ActiveSupport::Logger.new(STDOUT)
 
