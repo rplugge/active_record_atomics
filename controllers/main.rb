@@ -22,3 +22,22 @@ end
 get "/album/:id" do
   erb :"album_photos"
 end
+
+get "/add_photo" do
+  erb :"add_photo"
+end
+
+get "/save_photo" do
+  photo = Photo.create({photographer_id: params["photo"]["photographer_id"].to_i, url: params["photo"]["url"]})
+  
+  params["albums"].each do |album|
+    album = Album.find(album.to_i)
+    photo.albums<<album
+  end
+  
+  erb :"success"
+end
+
+get "/photographer/:id" do
+  erb :"photographer_photos"
+end

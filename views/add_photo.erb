@@ -1,0 +1,15 @@
+<form action="/save_photo">
+  <% Photographer.all.each do |photographer| %>
+    <input type="radio" name="photo[photographer_id]" value="<%= photographer.id %>"><%= photographer.name %>
+  <% end %>
+  
+  <input type="text" placeholder="Photo Url" name="photo[url]">
+  
+  <h4>Albums</h4>
+  <h4>Select the album or albums you wish to add this photo to.</h4>
+  <% Album.all.each do |album| %>
+    <input type="checkbox" name="albums[]" value=<%= album.id %>><%= album.name %>
+  <% end %>
+  
+  <input type="submit">
+</form>

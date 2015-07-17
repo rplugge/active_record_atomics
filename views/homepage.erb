@@ -10,3 +10,13 @@
     <a href="http://localhost:4567/album/<%= album.id %>"><%= album.name %></a>
   <% end %>
 </div>
+
+<button id="photographers_button">View Photos By Photographer</button>
+
+<div id="photographer_links">
+  <% Photographer.all.each do |photographer| %>
+    <a href="http://localhost:4567/photographer/<%= photographer.id %>"><%= photographer.name %></a>
+  <% end %>
+</div>
+
+<a id="new_photo" href="http://localhost:4567/add_photo">Add a new photo</a>

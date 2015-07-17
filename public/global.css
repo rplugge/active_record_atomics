@@ -1,3 +1,5 @@
+/* ###### HOMEPAGE ###### */
+
 #albums_button {
   display: block;
   margin: 10px;
@@ -6,6 +8,24 @@
 #album_links {
   display: none;
 }
+
+#photographers_button {
+  display: block;
+  margin: 10px;
+}
+
+#photographer_links {
+  display: none;
+}
+
+#new_photo {
+  display: block;
+  margin-top: 10px;
+}
+
+
+/* ##### View All Photos ##### */
+
 
 #photos_div div {
   width: 200px;
@@ -18,4 +38,11 @@
 
 #photos_div img {
   width: 100%;
+}
+
+/* ##### Add New Photo ##### */
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -1,7 +1,6 @@
 <div id="photos_div">
   <div>
-    <% Album.where(id: params["id"])[0].photos.each do |photo| %>
-      <p><%= Photographer.where(id: photo.photographer_id).first.name %></p>
+    <% Photographer.where(id: params["id"])[0].photos.each do |photo| %>
       <img src=<%= photo.url %>></img>
     <% end %>
   </div>
