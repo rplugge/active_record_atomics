@@ -4,7 +4,9 @@ source "https://rubygems.org"
 # gem "rails"
 gem 'pry'
 gem 'activerecord'
-gem 'sqlite3'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'bcrypt'
+
+gem 'sqlite3', :groups => [:development, :test]
+gem 'pg', :groups => [:production]
